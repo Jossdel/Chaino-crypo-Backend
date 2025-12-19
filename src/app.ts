@@ -1,7 +1,8 @@
 import express from "express";
 import router from "./Routes/route.cryptos";
-
+import cors from "cors";
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.get("/", (req: express.Request, res: express.Response) => {
   res.send("API is running...");
